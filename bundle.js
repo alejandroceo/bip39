@@ -2031,14 +2031,9 @@ function generateSeed(entropyBits) {
     // Generar un buffer de entropía aleatoria
     window.crypto.getRandomValues(entropyBytes);
 
-    try {
-        // Convertir la entropía a una frase mnemotécnica
-        const mnemonic = bip39.entropyToMnemonic(entropyBytes);
-        document.getElementById('seedOutput').value = mnemonic;
-    } catch (error) {
-        console.error("Error generando la frase mnemotécnica:", error);
-        alert("Ocurrió un error al generar la frase mnemotécnica. Por favor, inténtalo de nuevo.");
-    }
+    // Convertir la entropía a una frase mnemotécnica
+    const mnemonic = bip39.entropyToMnemonic(entropyBytes);
+    document.getElementById('seedOutput').value = mnemonic;
 }
 
 // Eventos para generar semillas
