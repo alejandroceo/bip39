@@ -1,6 +1,6 @@
 {
   "name": "wallet-crypto-alejandro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cryptocurrency wallet seed generator using the BIP39 protocol.",
   "main": "entropia.js",
   "scripts": {
