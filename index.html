@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Generador de Seeds - BIP39</title>
+    <!-- Importar estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Generador de Seeds - BIP39</h1>
+        </header>
+
+        <main>
+            <div class="btn-container">
+                <button id="generateSeedBtn">Generar Seed de 12 Palabras</button>
+            </div>
+
+            <div class="output-container">
+                <h2>Seed Generada:</h2>
+                <textarea id="seedOutput" rows="4" readonly></textarea>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Generador de Seeds</p>
+        </footer>
+    </div>
+
+    <!-- Importar la biblioteca BIP39 desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bip39@3.0.4/browser/bip39.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
