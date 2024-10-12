@@ -1,8 +1,13 @@
+// Importar bip39
 const bip39 = require('bip39'); // Asegúrate de requerir la biblioteca
 
 // Función para generar el seed según la entropía
-function generateSeed(entropy) {
-    const mnemonic = bip39.entropyToMnemonic(bip39.generateEntropy(entropy));
+function generateSeed(entropyBits) {
+    // Generar un buffer de entropía aleatoria
+    const entropyBytes = new Uint8Array(entropyBits / 8);
+    crypto.getRandomValues(entropyBytes); // Solo para navegadores
+
+    const mnemonic = bip39.entropyToMnemonic(entropyBytes);
     document.getElementById('seedOutput').value = mnemonic;
 }
 
