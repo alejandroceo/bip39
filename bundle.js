@@ -2019,6 +2019,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 },{}],4:[function(require,module,exports){
+(function (Buffer){(function (){
 // Importar bip39
 const bip39 = require('bip39');
 
@@ -2031,8 +2032,11 @@ function generateSeed(entropyBits) {
     // Generar un buffer de entropía aleatoria
     window.crypto.getRandomValues(entropyBytes);
 
+    // Convertir los bytes de entropía a una cadena hexadecimal
+    const entropyHex = Buffer.from(entropyBytes).toString('hex');
+
     // Convertir la entropía a una frase mnemotécnica
-    const mnemonic = bip39.entropyToMnemonic(entropyBytes);
+    const mnemonic = bip39.entropyToMnemonic(entropyHex);
     document.getElementById('seedOutput').value = mnemonic;
 }
 
@@ -2055,7 +2059,8 @@ document.getElementById('generate24Words').addEventListener('click', function() 
 
 // Exponer BIP39 globalmente
 window.bip39 = bip39;
-},{"bip39":15}],5:[function(require,module,exports){
+}).call(this)}).call(this,require("buffer").Buffer)
+},{"bip39":15,"buffer":2}],5:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isBytes = isBytes;

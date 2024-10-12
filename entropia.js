@@ -10,8 +10,11 @@ function generateSeed(entropyBits) {
     // Generar un buffer de entropía aleatoria
     window.crypto.getRandomValues(entropyBytes);
 
+    // Convertir los bytes de entropía a una cadena hexadecimal
+    const entropyHex = Buffer.from(entropyBytes).toString('hex');
+
     // Convertir la entropía a una frase mnemotécnica
-    const mnemonic = bip39.entropyToMnemonic(entropyBytes);
+    const mnemonic = bip39.entropyToMnemonic(entropyHex);
     document.getElementById('seedOutput').value = mnemonic;
 }
 
