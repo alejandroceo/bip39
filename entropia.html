@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Generador de Seeds basado en BIP39 para criptomonedas. Genera semillas seguras de manera sencilla.">
     <title>Generador de Seeds - BIP39</title>
-    <!-- Importar estilos -->
     <link rel="stylesheet" href="entropia.css">
 </head>
 <body>
@@ -17,11 +15,11 @@
 
         <main>
             <div class="btn-container">
-                <button id="generate12Words" aria-label="Generar Seed de 12 Palabras">Generar Seed de 12 Palabras</button>
-                <button id="generate15Words" aria-label="Generar Seed de 15 Palabras">Generar Seed de 15 Palabras</button>
-                <button id="generate18Words" aria-label="Generar Seed de 18 Palabras">Generar Seed de 18 Palabras</button>
-                <button id="generate21Words" aria-label="Generar Seed de 21 Palabras">Generar Seed de 21 Palabras</button>
-                <button id="generate24Words" aria-label="Generar Seed de 24 Palabras">Generar Seed de 24 Palabras</button>
+                <button id="generate12Words">Generar Seed de 12 Palabras</button>
+                <button id="generate15Words">Generar Seed de 15 Palabras</button>
+                <button id="generate18Words">Generar Seed de 18 Palabras</button>
+                <button id="generate21Words">Generar Seed de 21 Palabras</button>
+                <button id="generate24Words">Generar Seed de 24 Palabras</button>
             </div>
 
             <div class="output-container">
@@ -36,7 +34,6 @@
     </div>
 
     <!-- Importar la biblioteca BIP39 desde CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/alejandroceo/lib39@latest/bundle.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/wallet-crypto-alejandro@1.0.13/bundle.js"></script>
 </body>
 </html>
